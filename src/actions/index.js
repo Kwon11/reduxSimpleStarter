@@ -8,4 +8,11 @@ function selectBook (book) {
   }
 }
 
-export default selectBook;
+function unSelectBook () {
+  return {
+    type: 'BOOK_SELECTED',
+    payload: null
+  }
+}
+
+export {selectBook, unSelectBook};

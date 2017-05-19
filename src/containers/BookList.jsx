@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import selectBook from '../actions/index.js';
+import {selectBook} from '../actions/index.js';
 import { bindActionCreators } from 'redux'; //the thing that makes actions flow through reducers
 
 
 class BookList extends Component {
+  constructor(props) {
+    super(props);
+    console.log('booklist', this.props)
+  }
   renderList () {
     return this.props.books.map((book) => {
       return (
